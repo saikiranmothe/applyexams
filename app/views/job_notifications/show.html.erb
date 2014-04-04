@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company name:</b>
+  <%= @job_notification.company_name %>
+</p>
+
+<p>
+  <b>Vacancies:</b>
+  <%= @job_notification.vacancies %>
+</p>
+
+<p>
+  <b>Last date:</b>
+  <%= @job_notification.last_date %>
+</p>
+
+<p>
+  <b>Exam date:</b>
+  <%= @job_notification.exam_date %>
+</p>
+
+<p>
+  <b>Age limit:</b>
+  <%= @job_notification.age_limit %>
+</p>
+
+<p>
+  <b>Education:</b>
+  <%= @job_notification.education %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @job_notification.user_id %>
+</p>
+
+
+<%= link_to 'Back', job_notifications_path %>

@@ -1,0 +1,77 @@
+<hr>
+  <h1 class="text-center"> EXAM NOTIFICATIONS</h1>
+<hr>
+<div class="row">
+  <div class="medium-3 columns">
+    <h3>Serach Jobs By Category</h3>
+    <hr>
+    <div class="panel callout radius">
+        <li><a href="/mbaexams">MBA EXAMS</a></li>
+        <li><a href="/mbaexams">MBA EXAMS</a></li>
+        <li><a href="/mbaexams">MBA EXAMS</a></li>
+        <li><a href="/mbaexams">MBA EXAMS</a></li>
+        <li><a href="/mbaexams">MBA EXAMS</a></li>
+     </div>
+  </div>
+ 
+
+  
+
+
+
+  <div class="medium-9 columns">
+    <div class="panel callout radius">
+        
+<h1>Listing exam_notifications</h1>
+<hr>
+<table class="">
+  <tr>
+    <th>Name</th>
+    <th>Last date</th>
+    <th>Exam date</th>
+    <th>Age limit</th>
+    <th>Company name</th>
+    <th>Education</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exam_notifications.each do |exam_notification| %>
+  <tr>
+    <td><%= exam_notification.name %></td>
+    <td><%= exam_notification.last_date %></td>
+    <td><%= exam_notification.exam_date %></td>
+    <td><%= exam_notification.age_limit %></td>
+    <td><%= exam_notification.company_name %></td>
+    <td><%= exam_notification.education %></td>
+    <td><%= link_to 'Show', exam_notification %></td>
+    <td>
+         <%= button_to "Apply", "/exam_notifications/apply/#{exam_notification.id}", :method => "post" %>
+        </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exam notification', new_exam_notification_path %>
+  
+<%= paginate @exam_notifications %>
+<hr>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+

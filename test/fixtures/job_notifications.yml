@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_name: MyString
+  vacancies: MyText
+  last_date: 2014-04-02
+  exam_date: 2014-04-02
+  age_limit: MyString
+  education: MyText
+  user_id: 1
+
+two:
+  company_name: MyString
+  vacancies: MyText
+  last_date: 2014-04-02
+  exam_date: 2014-04-02
+  age_limit: MyString
+  education: MyText
+  user_id: 1

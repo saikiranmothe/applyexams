@@ -1,0 +1,25 @@
+<h1>Listing apply_jobs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Job notification</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apply_jobs.each do |apply_job| %>
+  <tr>
+    <td><%= apply_job.user_id %></td>
+    <td><%= apply_job.job_notification_id %></td>
+    <td><%= link_to 'Show', apply_job %></td>
+    <td><%= link_to 'Edit', edit_apply_job_path(apply_job) %></td>
+    <td><%= link_to 'Destroy', apply_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apply job', new_apply_job_path %>

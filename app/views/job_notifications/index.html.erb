@@ -1,0 +1,40 @@
+<h1 class="text-center">Listing job_notifications</h1>
+<hr>
+<table class="text-center">
+  <tr>
+    <th>Company name</th>
+    <th>Vacancies</th>
+    <th>Last date</th>
+    <th>Exam date</th>
+    <th>Age limit</th>
+    <th>Education</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @job_notifications.each do |job_notification| %>
+  <tr>
+    <td><%= job_notification.company_name %></td>
+    <td><%= job_notification.vacancies %></td>
+    <td><%= job_notification.last_date %></td>
+    <td><%= job_notification.exam_date %></td>
+    <td><%= job_notification.age_limit %></td>
+    <td><%= job_notification.education %></td>
+    <td><%= job_notification.category %></td>
+    <td><%= link_to 'Show', job_notification %></td>
+        <td>
+         <%= button_to "Apply", "/job_notifications/apply/#{job_notification.id}", :method => "post" %>
+        </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% link_to 'New Job notification', new_job_notification_path %>
+
+<%= paginate @job_notifications %>
+
+<hr>
